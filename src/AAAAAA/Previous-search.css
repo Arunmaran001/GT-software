@@ -1,0 +1,90 @@
+/* Main container styling */
+.previous-searches {
+    display: block;
+    padding: 1rem;
+
+}
+
+/* Heading styling */
+.previous-searches h2 {
+    color: var(--text-color);
+    margin-bottom: 0.5em;
+}
+
+/* Grid layout for previous searches items */
+.previous-searches-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
+    grid-template-rows: repeat(3, auto); 
+    gap: 1em; 
+    margin-bottom: 1rem; 
+}
+
+/* Individual search item styling */
+.search-item {
+    background-color: var(--primary-color);
+    padding: 0.5em 1em;
+    color: #fff;
+    border-radius: 30px;
+    box-shadow: 0 3px 6px var(--shadow-color);
+    transform: translateX(100%);
+    opacity: 0;
+    animation: slideInRight 0.2s forwards;
+    text-align: center;
+}
+
+/* Keyframes for slide-in animation */
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Search box styling */
+.search-box {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 35px;
+}
+
+/* Input and button within search box */
+.search-box input,
+.search-box .btn {
+    height: 35px;
+}
+
+/* Input field styling */
+.search-box input {
+    min-width: 250px;
+    padding: 0 .5em;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    border: 1px solid #4d4d4d;
+}
+
+/* Button styling */
+.search-box .btn {
+    /* padding-block :0;
+    padding-inline: .75em;
+    border-radius: 0 5px 5px 0; */
+    
+    
+}
+.btn_search{
+
+    height: 35px;
+    display: flex;
+    align-items: center;
+    border: 1px solid #4d4d4d;
+    border-radius: 0px 5px 5px 0px;
+}
+/* Button hover state */
+.search-box .btn:hover {
+    background-color: var(--button-hover-color); 
+}

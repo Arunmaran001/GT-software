@@ -1,0 +1,111 @@
+ .logo {
+    font-size: 1.2em;
+    font-weight: bolder;
+    color: var(--primary-color);
+    text-shadow: 0 1px 3px var(--shadow-color);
+    text-decoration: none;
+  }
+  
+  .logo span {
+    color: var(--text-color);
+  }
+  
+  .navbar {
+    height: 55px;
+    box-shadow: 0 3px 6px var(--shadow-color);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    padding: 0 1em;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 1em;
+  }
+  
+  .nav-links a {
+    margin-left: 1em;
+    color: var(--text-light);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    position: relative;
+    transition: color var(--animation-speed) ease-in-out;
+    text-decoration: none;
+    font-size: 0.9em;
+  }
+  
+  .nav-links a::before {
+    content: '';
+    display: inline-block;
+    height: 3px;
+    width: 100%;
+    background-color: var(--primary-color);
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    transform: scaleX(0);
+    transition: transform calc(var(--animation-speed) * 2) ease-in-out;
+  }
+  
+  .nav-links a:hover::before {
+    transform: scaleX(1);
+  }
+  
+  .nav-links a.active {
+    color: var(--primary-color);
+    font-weight: bold;
+  }
+  
+  .sidebar-btn {
+    height: 28px;
+    width: 30px;
+    position: relative;
+    display: none;
+    cursor: pointer;
+  }
+  
+  .bar {
+    border-radius: 5px;
+    height: 6px;
+    width: 100%;
+    background-color: var(--text-color);
+    position: absolute;
+    transition: transform calc(var(--animation-speed) * 5) ease-in-out;
+  }
+  
+  .bar:nth-child(1) {
+    top: 0;
+  }
+  
+  .bar:nth-child(2) {
+    top: 50%;
+    transform-origin: right;
+    transform: scaleX(0.8) translateY(-50%);
+  }
+  
+  .bar:nth-child(3) {
+    top: 100%;
+    transform-origin: right;
+    transform: scaleX(1.1) translateY(-100%);
+  }
+  
+  .sidebar-btn.active .bar {
+    transform-origin: center;
+    top: 50%;
+  }
+  
+  .sidebar-btn.active .bar:nth-child(1) {
+    transform: translateY(-50%) scale(1) rotate(45deg);
+  }
+  
+  .sidebar-btn.active .bar:nth-child(2) {
+    transform: scaleX(0) translateY(-50%);
+  }
+  
+  .sidebar-btn.active .bar:nth-child(3) {
+    transform: translateY(-50%) scale(1) rotate(-45deg);
+  }
+   
+
+
+
