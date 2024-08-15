@@ -44,13 +44,17 @@
         opacity: 1;
     }
 }
-
+.cart-icon{
+    align-items: center;
+    justify-content: flex-end;
+} 
 /* Search box styling */
 .search-box {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: flex-start;
     height: 35px;
+    width: 35px;
 }
 
 /* Input and button within search box */
@@ -70,9 +74,9 @@
 
 /* Button styling */
 .search-box .btn {
-    /* padding-block :0;
+    padding-block :0;
     padding-inline: .75em;
-    border-radius: 0 5px 5px 0; */
+    border-radius: 0 5px 5px 0; 
     
     
 }

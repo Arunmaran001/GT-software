@@ -20,7 +20,7 @@ function Homepage() {
               <Home />
               {/* <Recipes />
               <Settings /> */}
-              <BookTable/>
+              {/* <BookTable/> */}
             </div>
 
           </Col>

@@ -80,5 +80,9 @@
 }
 
 .payment-section button {
-    margin-top: 1rem;
+    margin-top: rem;
+}
+.proceed{
+  float: right;
+
 }
